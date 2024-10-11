@@ -2,8 +2,8 @@
 
 using namespace std;
 
-bool isFull(char seatChar[7][5]);
-void checkSeat(char seatChar[7][5],int row,char seat);
+bool isFull(char seatChart[7][5]);
+void checkSeat(char seatChart[7][5],int row,char seat);
 void printSeats(char seatChart[7][5]);
 
 int main() {
@@ -46,10 +46,10 @@ int main() {
 	return 0;
 }
 
-bool isFull(char seatChar[7][5]) {
+bool isFull(char seatChart[7][5]) {
 	for (int i = 0; i < 7; i++) {
 		for (int j = 1; j < 4; j++) {
-			if (seatChar[i][j] != 'X')
+			if (seatChart[i][j] != 'X')
 				return false;
 		}
 	}
