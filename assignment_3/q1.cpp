@@ -37,7 +37,7 @@ int main() {
         added[i] = sum % 10;
         carry = sum / 10;
     }
-
+    //Carried value
     if (carry) {
         added[length++] = carry;
     }
