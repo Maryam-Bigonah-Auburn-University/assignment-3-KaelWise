@@ -5,7 +5,7 @@ using namespace std;
 bool isFull(char seatChart[7][5]);
 void checkSeat(char seatChart[7][5],int row,char seat);
 void printSeats(char seatChart[7][5]);
-
+//Seating Array
 int main() {
     char seatChart[7][5] = {{'1','A','B','C','D'},
                 {'2','A','B','C','D'},
@@ -17,7 +17,7 @@ int main() {
     int row = 0;
     char seat = ' ',
          enterAgain = 'N';
-
+//Function that enters seat numbers and row numbers, then displays the changes
     do {
         printSeats(seatChart);
         cout << "Enter row number:";
@@ -49,7 +49,7 @@ int main() {
 
     return 0;
 }
-
+//Function checking if all seats are booked
 bool isFull(char seatChart[7][5]) {
     for (int i = 0; i < 7; i++) {
         for (int j = 1; j < 4; j++) {
@@ -59,7 +59,7 @@ bool isFull(char seatChart[7][5]) {
     }
     return true;
 }
-
+//Function to check if seats are booked and to mark them X when booking them
 void checkSeat(char seatChart[7][5], int row, char seat) {
     int i = 0;
 
@@ -71,7 +71,7 @@ void checkSeat(char seatChart[7][5], int row, char seat) {
         cout << "Seat " << row << seat << " booked." << endl;
     }
 }
-
+//Function to display the seats
 void printSeats(char seatChart[7][5]) {
     cout << "AVAILABLE SEATS:" << endl;
     for (int i = 0; i < 7; i++) {
